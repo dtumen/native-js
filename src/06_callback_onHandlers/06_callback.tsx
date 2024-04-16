@@ -1,4 +1,4 @@
-import React, { ChangeEvent, MouseEvent } from 'react'
+import React, { ChangeEvent } from 'react'
 
 export const User = () => {
   // фокус спал:
@@ -22,7 +22,7 @@ export const User = () => {
 
 
   return <div>
-    <textarea onChange={onChangeTextHandler} onBlur={onBlurElementHandler}>Tumen</textarea>
+    <textarea onChange={onChangeTextHandler} onBlur={onBlurElementHandler} defaultValue={'Tumen'} />
     <input type="text" onChange={onChangeInputHandler}/>
     <button onClick={saveUser}>save</button>
   </div>
