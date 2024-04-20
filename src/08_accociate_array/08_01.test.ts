@@ -1,4 +1,4 @@
-import { UserSType, UserType, deleteUser, transformArray, updateUser } from './08_01'
+import { UserSType, UserType, transformArray, updateUser } from './08_01'
 
 test('should return accociate array', () => {
   let users: UserType[] = [
