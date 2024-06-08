@@ -1,5 +1,5 @@
 
-// Types:
+// 1. Types:
 type AdressType = {
     city: string
     house: string
@@ -42,7 +42,7 @@ export type UserCompaniesType = {
     [key: string]: CompanyType[]
 }
 
-// Functions:
+// 2. Functions:
 export function increaseAge(u: UserType2) {
     return {
         ...u,
@@ -114,7 +114,7 @@ export const updateCompany = (users: UserCompaniesType,
     return usersCopies;
 }
 
-// practice:
+// 3. Practice:
 
 type TeacherType = {
     teacher: {
