@@ -1,4 +1,4 @@
-import { changeAge } from './09_01';
+import {addUser, changeAge} from './09_01';
 
 export type UserType = {
 	name: string;
@@ -30,7 +30,7 @@ test('add new user in array', () => {
 
   let admins = users;
 
-  admins.push({ name: 'Aldar', age: 30 });
+  addUser(admins, { name: 'Aldar', age: 30 });
 
   expect(users.length).toBe(3);
   expect(users[2]).toEqual({ name: 'Aldar', age: 30 })
