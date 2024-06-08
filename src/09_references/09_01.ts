@@ -1,5 +1,7 @@
 
 // мутабельная функция объекта:
-export function changeAge(u) {
+import {UserType} from './09_01.test';
+
+export function changeAge(u: UserType) {
   u.age++;
 }

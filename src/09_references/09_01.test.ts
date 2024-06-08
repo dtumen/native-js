@@ -1,6 +1,6 @@
 import { changeAge } from './09_01';
 
-type UserType = {
+export type UserType = {
 	name: string;
 	age: number;
 };

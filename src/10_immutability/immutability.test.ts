@@ -1,8 +1,8 @@
 import {
-    changeLaptop,
+    changeLaptop, getCopyObject,
     getHairCut,
     increaseAge,
-    moveUser, removeBook, updateBook, updateCompany, updateSkills, UserCompaniesType,
+    moveUser, ObjectType, removeBook, updateBook, updateCompany, updateSkills, UserCompaniesType,
     UserType2,
     UserWithBookType,
     UserWithLaptopType, UserWithSkillsType
@@ -195,4 +195,27 @@ test('update company', () => {
 
     expect(result[ALDAR]).not.toBe(companies[ALDAR]);
     expect(result[ALDAR][1].title).toBe('PFR');
+})
+
+// practice:
+test('', () => {
+    let a: ObjectType = {
+        name: 'it-kamasutra.com',
+        protocol: 'https',
+        maxStudentsCount: 10,
+        isOnline: true,
+        students: ['Ivan', 'Andrey', 'Farid'],
+        classroom: {
+            teacher: {
+                name: 'Veronica',
+                age: 27,
+            }
+        }
+    }
+
+    const result = getCopyObject(a);
+
+    expect(result).not.toBe(a);
+    expect(result.students).not.toBe(a.students);
+    expect(result.classroom).not.toBe(a.classroom);
 })

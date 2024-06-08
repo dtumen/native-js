@@ -111,3 +111,34 @@ export const updateCompany = (users: UserCompaniesType,
 
     return usersCopies;
 }
+
+// practice:
+
+type TeacherType = {
+    teacher: {
+        name: string
+        age: number
+    }
+}
+
+export type ObjectType = {
+    name: string
+    protocol: string
+    maxStudentsCount: number
+    isOnline: boolean
+    students: string[]
+    classroom: TeacherType
+}
+export const getCopyObject = (obj: ObjectType) => {
+    return {
+        ...obj,
+        students: [...obj.students],
+        classroom: {
+            ...obj.classroom,
+            teacher: {
+                ...obj.classroom.teacher
+            }
+        }
+    }
+}
+
