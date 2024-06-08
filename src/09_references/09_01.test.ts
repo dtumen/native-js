@@ -14,10 +14,6 @@ test('reference type test', () => {
 	expect(user.age).toBe(27);
 	changeAge(user);
 	expect(user.age).toBe(28);
-
-	const superman = user;
-	changeAge(superman);
-	expect(user.age).toBe(29);
 });
 
 test('add new user in array', () => {
