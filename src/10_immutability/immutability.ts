@@ -1,13 +1,15 @@
 
 // Types:
+type AdressType = {
+    city: string
+    house: string
+}
+
 export type UserType2 = {
     name: string
     age: number
     hair: number
-    address: {
-        city: string
-        house: string
-    }
+    address: AdressType
 }
 
 export type LaptopType = {
