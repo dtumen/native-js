@@ -205,7 +205,7 @@ describe('immutability', () => {
     })
 
     // practice:
-    test('', () => {
+    test('practice deep_clone', () => {
         let a: ObjectType = {
             name: 'it-kamasutra.com',
             protocol: 'https',
