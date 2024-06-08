@@ -1,3 +1,5 @@
+
+// Types:
 export type UserType2 = {
     name: string
     age: number
@@ -29,46 +31,48 @@ export type UserWithSkillsType = UserType2 & {
     skills: SkillsType[]
 }
 
+export type CompanyType = {
+    id: number
+    title: string
+}
+
+export type UserCompaniesType = {
+    [key: string]: CompanyType[]
+}
+
+// Functions:
 export function increaseAge(u: UserType2) {
-    const copyUser = {
+    return {
         ...u,
         age: u.age + 1,
     }
-
-    return copyUser;
 }
 
 export function getHairCut(u: UserType2, power: number) {
-    const copy = {
+    return {
         ...u,
         hair: u.hair / power,
     }
-
-    return copy;
 }
 
 export function moveUser(u: UserType2, cityName: string) {
-    const copy = {
+    return {
         ...u,
         address: {
             ...u.address,
             city: cityName,
         }
     }
-
-    return copy;
 }
 
 export function changeLaptop(u: UserWithLaptopType, laptopModel: string) {
-    const copy = {
+    return {
         ...u,
         laptop: {
             ...u.laptop,
             model: laptopModel,
         }
     }
-
-    return copy;
 }
 
 export function updateBook(u: UserWithBookType & UserWithLaptopType, book: string, newBook: string) {
@@ -93,16 +97,6 @@ export function updateSkills(u: UserWithSkillsType & UserWithBookType & UserWith
             : s)
     }
 }
-
-export type CompanyType = {
-    id: number
-    title: string
-}
-
-export type UserCompaniesType = {
-    [key: string]: CompanyType[]
-}
-
 export const updateCompany = (users: UserCompaniesType,
                               userName: string,
                               idCompany: number,
